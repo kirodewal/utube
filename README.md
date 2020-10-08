@@ -1,4 +1,4 @@
-# [Youtube Uploader Bot](https://tx.me/utubeitbot)
+# [Youtube Upload Bot](https://tx.me/utubeitbot)
 
 > Simple [Telegram Bot](https://core.telegram.org/bots "Telegram Bots") to Upload videos to [Youtube](https://youtube.com "YouTube") written in Python3.
 
