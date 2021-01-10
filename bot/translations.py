@@ -30,7 +30,7 @@ class Messages:
 
     NO_AUTH_CODE_MSG = "There is no code. Please provide some code"
 
-    AUTH_SUCCESS_MSG = "Congrats, you have successfully authenticated me to upload to Youtube.\nHappy uploading!"
+    AUTH_SUCCESS_MSG = "Congrats, you have successfully authenticated me to upload to Youtube.\nHappy uploading!\n\nSubscribe Our Channel @HindiXstream To Get Latest Movie's Soon "
 
     AUTH_FAILED_MSG = "Authentication failed\nDetails:{}"
     
