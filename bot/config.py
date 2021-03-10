@@ -2,7 +2,7 @@ import os
 
 class Config:
 
-    BOT_TOKEN = os.environ.get("1173368697:AAF5y6krHu-X3KjzpfeaZbmgzclJH5gAf7U")
+    BOT_TOKEN = os.environ.get("1691360925:AAHD9-q-uwhJDUutbOucGCGEEQ3IoyccGok")
     
     SESSION_NAME = os.environ.get("SESSION_NAME", 'youtubeitbot')
 
