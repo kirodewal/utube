@@ -1,3 +1,5 @@
+# © @Kirodewal
+
 import logging
 
 from .utubebot import UtubeBot
