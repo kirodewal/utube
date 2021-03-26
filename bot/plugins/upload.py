@@ -1,3 +1,5 @@
+# © @Kirodewal
+
 import os
 import time
 import string
@@ -24,7 +26,6 @@ log = logging.getLogger(__name__)
     Filters.private
     & Filters.incoming
     & Filters.command('upload')
-    & Filters.user(Config.AUTH_USERS)
 )
 async def _upload(c, m):
     if not os.path.exists(Config.CRED_FILE):
@@ -131,7 +132,7 @@ async def progress(cur, tot, start_time, status, snt, c, download_id):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton('Cancel!', f'cncl+{download_id}')
+                            InlineKeyboardButton('Cancel! 🚫', f'cncl+{download_id}')
                         ]
                     ]
                 )
