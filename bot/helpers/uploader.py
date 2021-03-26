@@ -1,3 +1,5 @@
+# © @Kirodewal
+
 import os
 import time
 import random
@@ -54,7 +56,7 @@ class Uploader:
             if not os.path.isfile(Config.CRED_FILE):
                 log.debug(f"{Config.CRED_FILE} does not exist")
                 self.status = False
-                self.message = "Upload failed because you did not authenticate me."
+                self.message = "Upload failed because you did not authenticate me.try again after authentication."
                 return
 
             auth.LoadCredentialsFile(Config.CRED_FILE)
@@ -67,9 +69,9 @@ class Uploader:
             categoryName = self.video_category[categoryId]
             title = self.title if self.title else os.path.basename(self.file)
             title = (Config.VIDEO_TITLE_PREFIX + title + Config.VIDEO_TITLE_SUFFIX).replace('<', '').replace('>', '')[:100]
-            description = (Config.VIDEO_DESCRIPTION + '\nCopyright Disclaimer under Section 107 of the copyright act 1976, allowance is made for fair use for purposes such as criticism, comment, news reporting, scholarship, and research. Fair use is a use permitted by copyright statute that might otherwise be infringing. Non-profit, educational or personal use tips the balance in favour of fair use.\n\nUploaded to YouTube with https://tx.me/UtubeitBot')[:5000]
+            description = (Config.VIDEO_DESCRIPTION + '\n\nUploaded to YouTube with https://tx.me/Utubeitbot \nTry Our Bot For Free Now..')[:5000]
             if not Config.UPLOAD_MODE:
-                privacyStatus = 'private'
+                privacyStatus = 'public'
             else:
                 privacyStatus = Config.UPLOAD_MODE
             
@@ -89,10 +91,10 @@ class Uploader:
 
             video_id = r['id']
             self.status = True
-            self.message = f"[{title}](https://youtu.be/{video_id}) uploaded to YouTube under category {categoryId} ({categoryName})"
+            self.message = f"[{title}](https://youtu.be/{video_id}) \n\n uploaded to YouTube under category {categoryId} ({categoryName})"
         except Exception as e:
             log.error(e, exc_info=True)
             self.status = False
-            self.message = f"Error occuered during upload.\nError details: {e}"
+            self.message = f"Error occuered during upload.Try again\nError details: {e}"
         
 
