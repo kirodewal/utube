@@ -1,3 +1,5 @@
+# © @Kirodewal
+
 import time
 import logging
 
