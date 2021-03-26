@@ -1,3 +1,5 @@
+# © @Kirodewal
+
 from pyrogram import filters as Filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
@@ -33,13 +35,13 @@ def map_btns(pos):
     Filters.private
     & Filters.incoming
     & Filters.command('help') 
-    & Filters.user(Config.AUTH_USERS)
 )
 async def _help(c, m):
 
     await m.reply_chat_action("typing")
     await m.reply_text(
         text = tr.HELP_MSG[1],
+        disable_web_page_preview=True,
         reply_markup = InlineKeyboardMarkup(map_btns(1)),
     )
 
@@ -52,5 +54,6 @@ async def help_answer(c, q):
     await q.answer()
     await q.edit_message_text(
         text = tr.HELP_MSG[pos],
+        disable_web_page_preview=True,
         reply_markup = InlineKeyboardMarkup(map_btns(pos))
     )
