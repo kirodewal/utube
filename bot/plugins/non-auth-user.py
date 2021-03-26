@@ -1,3 +1,5 @@
+# © @Kirodewal
+
 import logging
 
 from pyrogram import filters as Filters
