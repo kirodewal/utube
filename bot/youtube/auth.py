@@ -1,3 +1,5 @@
+# © @Kirodewal
+
 from apiclient.discovery import build
 from apiclient.errors import ResumableUploadError
 from oauth2client.client import OAuth2WebServerFlow, FlowExchangeError
