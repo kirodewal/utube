@@ -1,3 +1,5 @@
+# © @Kirodewal
+
 from pyrogram import filters as Filters
 
 from ..utubebot import UtubeBot
@@ -10,4 +12,4 @@ async def cncl(c, q):
         await q.answer("Your process is not currently active!", show_alert=True)
         return
     c.download_controller[pid] = False
-    await q.answer("Your process will be cancelled soon!", show_alert=True)
+    await q.answer("Your process will be cancelled soon! \n\n Bot by: @HxBots", show_alert=True)
