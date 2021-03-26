@@ -35,6 +35,7 @@ def map_btns(pos):
     Filters.private
     & Filters.incoming
     & Filters.command('help') 
+    & Filters.user(Config.AUTH_USERS)
 )
 async def _help(c, m):
 
